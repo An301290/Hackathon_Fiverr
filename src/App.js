@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Menu from "./Components/Menu";
-
 import MapView from "./MapView";
+
 
 function App() {
   return (
@@ -16,12 +16,10 @@ function App() {
       <Menu />
       <Router>
         <Switch>
-          <Route path="/show-events">
-            <MapView />
-          </Route>
-          <Route path="/show-events">
-            <MapView />
-          </Route>
+          <Route path="/create-new-event" />
+          <Route path="/show-events" component={MapView} />
+          <Route path="/your-events" />
+          <Route path="/change-city" />
         </Switch>
       </Router>
     </>
