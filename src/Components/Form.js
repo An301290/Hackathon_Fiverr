@@ -38,7 +38,13 @@ const Basic = () => (
     >
       {({ isSubmitting }) => (
         <div class="flex-1  text-center bg-green-300 px-4 py-2 m-2">
+
+
           <Form>
+
+
+
+              
             <p class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
               Name of the event
             </p>

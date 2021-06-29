@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Map from "./Map.js";
+import MapEvent from "./MapEvent.js";
 import Basic from "./components/Form";
 /* import LandingPage from "./components/LandingPage.js"; */
 
@@ -15,14 +15,16 @@ const MapClick = () => {
 
   return (
     <div>
-      <Basic />
+      
 
       {/* <MenuBarMap /> */}
 
       <div className="main-map">
-        <Map />
-        <h1>This is the main Map-view</h1>
+      <h1>Please double click on the location to add an event.</h1>
+        <MapEvent />
+        
       </div>
+      <Basic />
     </div>
   );
 };
