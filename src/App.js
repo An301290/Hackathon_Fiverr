@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Components/NavBar";
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,15 +15,14 @@ import Basic from "./components/Form.js";
 function App() {
   return (
     <>
-      <Menu />
-      <Basic />
-      <LandingPage />
       <Router>
+        <Navbar />
+        {/* <LandingPage /> */}
         <Switch>
-          <Route path="/create-new-event" />
-          <Route path="/show-events" component={MapView} />
-          <Route path="/your-events" />
-          <Route path="/change-city" />
+          <Route exact path="/create-new-event" />
+          <Route exact path="/show-events" component={MapView} />
+          <Route exact path="/your-events" />
+          <Route exact path="/change-city" component={LandingPage} />
         </Switch>
       </Router>
     </>

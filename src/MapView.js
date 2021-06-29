@@ -3,6 +3,10 @@ import MenuBarMap from "./MenuBarMap";
 import Map from "./Map.js";
 import SideBarMap from "./SideBarMap.js";
 import left from "./left.png";
+<<<<<<< HEAD
+=======
+import LandingPage from "./Components/LandingPage";
+>>>>>>> 2a29c7a0f9e4576a36f5c5404b565abe30b68bf5
 
 const MapView = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -28,14 +32,13 @@ const MapView = () => {
 
   return (
     <div>
-      <MenuBarMap />
+      <LandingPage />
       <SideBarMap
         hideSideBar={hideSideBar}
         sidebar={sidebar}
         markerNumber={markerNumber}
       />
       <div className="main-map">
-        <img src={left} />
         <Map
           sidebar={sidebar}
           hideSideBar={hideSideBar}
