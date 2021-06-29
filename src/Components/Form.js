@@ -3,29 +3,35 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 
-
 const Basic = () => (
   <div>
     <h1 class="block uppercase tracking-wide text-black-800 text-m font-bold mb-2">
       Add the event on the map
     </h1>
+    <h1>"{sessionStorage.getItem("lastLat")}"</h1>
+    <h1>"{sessionStorage.getItem("lastLng")}"</h1>
     <Formik
       initialValues={{
         name: " ",
         desc: " ",
         date: "",
         owner: "",
+        lat: sessionStorage.getItem("lastLat"),
+        lng: sessionStorage.getItem("lastLng"),
       }}
       validate={(values) => {}}
       onSubmit={(values, { setSubmitting }) => {
         console.log(values);
         setTimeout(async () => {
           console.log("yo");
+          console.log(sessionStorage.getItem("lastLat"));
+          console.log(sessionStorage.getItem("lastLng"));
 
           //console.log(json.stringify(values));
           //add to db
           try {
             let data = await axios.post("/api/event", values);
+            axios.post("/api/event");
           } catch (err) {
             console.log(err);
           }
@@ -38,13 +44,7 @@ const Basic = () => (
     >
       {({ isSubmitting }) => (
         <div class="flex-1  text-center bg-green-300 px-4 py-2 m-2">
-
-
           <Form>
-
-
-
-              
             <p class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
               Name of the event
             </p>

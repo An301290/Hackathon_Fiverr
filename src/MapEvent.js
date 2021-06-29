@@ -31,9 +31,10 @@ export default function MapEvent(props) {
 
   let a = [];
   const handleAddClick = (e) => {
-    console.log(e.lngLat);
     a = e.lngLat;
     console.log(a);
+    sessionStorage.setItem("lastLat", e.lngLat[0]);
+    sessionStorage.setItem("lastLng", e.lngLat[1]);
   };
 
   const onClick = () => {
@@ -102,6 +103,8 @@ export default function MapEvent(props) {
             </Popup>
           ) : null
         )} */}
+
+        
       </ReactMapGL>
     </div>
   );

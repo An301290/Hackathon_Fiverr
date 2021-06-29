@@ -11,7 +11,6 @@ import LandingPage from "./components/LandingPage.js";
 /* import Menu from "./Components/Menu"; */
 import MapView from "./MapView";
 import MapClick from "./Mapclick";
-import Basic from "./components/Form.js";
 
 function App() {
   return (
