@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuBarMap from "./MenuBarMap";
 import Map from "./Map.js";
 import SideBarMap from "./SideBarMap.js";
-import left from "./left.png";
+
 import LandingPage from "./Components/LandingPage.js";
 
 const MapView = () => {
