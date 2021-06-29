@@ -10,9 +10,9 @@ const Menu = () => {
     return (
        <Router>
       <div>
-        <nav>
-          <ul className="nav-bar">
-            <li>
+        <nav class="flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-gray-100 md:bg-transparent p-6 md:p-0">
+          <ul>
+            <li class="text-indigo-600 hover:underline">
               <NavLink exact activeClassName="active" to="/create-new-event">
                 Create New Event
               </NavLink>
@@ -32,8 +32,8 @@ const Menu = () => {
                 Change City
               </NavLink>
             </li>
-          </ul>
-        </nav>
+            </ul>
+          </nav>
         </div>
         </Router>
     )
