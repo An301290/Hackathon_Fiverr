@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/LandingPage.css";
 
-function LandingPage() {
+function LandingPage({ viewport, setViewport }) {
   return (
     <>
       <div className="main-div">
-        <a href="#" className="country-berlin">
+        <a href="" className="country-berlin">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Berlin
         </a>
-        <a href="#" className="country-budapest">
+        <a href="/budapest" className="country-budapest" >
           <span></span>
           <span></span>
           <span></span>
