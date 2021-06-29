@@ -12,12 +12,17 @@ import Menu from "./Components/Menu";
 import MapView from "./MapView";
 import Basic from "./components/Form.js";
 
+
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        {/* <LandingPage /> */}
+        
+
+        
+
+
+      <Navbar />
         <Switch>
           <Route exact path="/create-new-event" />
           <Route exact path="/show-events" component={MapView} />
