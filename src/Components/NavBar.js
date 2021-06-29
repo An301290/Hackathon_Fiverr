@@ -1,14 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="md:px-32 w-full h-22 flex justify-between items-center bg-navbarbg">
+    <nav className="md:px-32  h-22 flex justify-between items-center p-5	bg-navbarbg">
       <div className="text-2xl text-secondary font-bold">
         <Link to="/">LOGO</Link>
       </div>
-      <ul className="md:w-200 flex justify-between font-semibold text-sm text-justify	 text-primary">
+      <ul className="md:w-8/12 flex justify-between font-semibold text-sm p-10	 text-justify	 text-primary">
         <li>
           <NavLink to="/create-new-event" activeClassName="text-secondary">
-          create new event
+          Create new event
           </NavLink>
         </li>
         <li>
@@ -27,7 +27,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <ul className="w-40 flex items-center justify-between  ">
+      {/* <ul className="w-40 flex items-center justify-between  ">
         <Link to="signin">
           <button className="text-secondary font-bold tracking-wide2">
             Sign In
@@ -38,7 +38,7 @@ const Navbar = () => {
             Sign Up
           </button>
         </Link>
-      </ul>
+      </ul> */}
     </nav>
   );
 };
