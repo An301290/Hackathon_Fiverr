@@ -28,7 +28,7 @@ const MapView = () => {
 
   return (
     <div>
-      <MenuBarMap />
+      {/* <MenuBarMap /> */}
       <SideBarMap
         hideSideBar={hideSideBar}
         sidebar={sidebar}

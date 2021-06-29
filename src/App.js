@@ -7,14 +7,19 @@ import {
   NavLink,
 } from "react-router-dom";
 import "./App.css";
-import Menu from "./Components/Menu";
 import MapView from "./MapView";
+
 
 
 function App() {
   return (
     <>
       <Router>
+        
+
+        
+
+
       <Navbar />
         <Switch>
           <Route exact path="/create-new-event" />
