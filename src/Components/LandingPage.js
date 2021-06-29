@@ -5,14 +5,12 @@ function LandingPage() {
   return (
     <>
       <div className="countries">
-        <button className="country">
-          <a href="/berlin">Berlin</a>
+        <button className="country-berlin" href="/berlin">
+          Berlin
         </button>
-        <button className="country">Budapest</button>
-      </div>
-      <div className="countries">
-        <button className="country">Paris</button>
-        <button className="country">Madrid</button>
+        <button className="country-budapest">Budapest</button>
+        <button className="country-paris">Paris</button>
+        <button className="country-lisbon">Lisbon</button>
       </div>
     </>
   );

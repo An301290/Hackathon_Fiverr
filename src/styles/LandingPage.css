@@ -3,7 +3,7 @@
   justify-content: space-around;
 }
 
-.country {
+.country-berlin {
   display: flex;
   text-align: center;
   flex-direction: row;
@@ -11,5 +11,49 @@
   justify-content: center;
   height: 200px;
   width: 200px;
-  background-color: rgb(197, 76, 76);
+  background-image: url("../Images/berlin.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+.country-budapest {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-image: url("../Images/bridge.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.country-paris {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-image: url("../Images/eiffel-tower.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.country-lisbon {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-image: url("../Images/lisbon.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
 }
