@@ -1,4 +1,5 @@
-import React from "react";
+import Navbar from "./components/NavBar";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,21 +7,34 @@ import {
   NavLink,
 } from "react-router-dom";
 import "./App.css";
-// import LandingPage from "./Components/LandingPage";
-import Menu from "./Components/Menu";
+import MapClick from "./Mapclick";
 import MapView from "./MapView";
+import LandingPage from "./components/LandingPage";
 
 function App() {
+  const [viewport, setViewport] = useState(
+    {
+      latitude: 52.520008,
+      longitude: 13.404954,
+      width: "100vw",
+      height: "100vh",
+      zoom: 5,
+    },
+    []
+  );
+
   return (
     <>
       {/* <LandingPage/> */}
       <Router>
-        <Menu />
+        <Navbar />
+      {/*   <MapView /> */}
+        {/* <LandingPage /> */}
         <Switch>
-          <Route path="/create-new-event" />
-          <Route path="/show-events" component={MapView} />
-          <Route path="/your-events" />
-          <Route path="/change-city" />
+          <Route exact path="/create-new-event" component={MapClick} />
+          <Route exact path="/show-events" component={MapView} />
+          <Route exact path="/your-events" />
+          <Route exact path="/change-city" component={LandingPage} />
         </Switch>
       </Router>
     </>

@@ -1,12 +1,11 @@
-import ReactMapGL, { Marker, Popup, FlyToInterpolator } from "react-map-gl";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import React, { useState, useEffect } from "react";
 import img from "./pin/map-42871_1280@3x.png";
 import "./styles/map.css";
-import * as d3 from "d3-ease";
-import countries from "./Data/data.js";
+import countries from "./Data/datas.js";
 require("dotenv").config();
 
-export default function Map(props) {
+export default function MapEvent(props) {
   const [viewport, setViewport] = useState({
     latitude: 52.520008,
     longitude: 13.404954,
@@ -32,31 +31,16 @@ export default function Map(props) {
 
   let a = [];
   const handleAddClick = (e) => {
-    console.log(e.lngLat);
     a = e.lngLat;
     console.log(a);
+    sessionStorage.setItem("lastLat", e.lngLat[0]);
+    sessionStorage.setItem("lastLng", e.lngLat[1]);
   };
 
   const onClick = () => {
     setLocation(null);
-    props.hideSideBar();
+    /* props.hideSideBar(); */
   };
-
-  const goToNYC = () => {
-    setViewport({
-      ...viewport,
-      longitude: -74.1,
-      latitude: 40.7,
-      zoom: 14,
-      transitionDuration: 5000,
-      transitionInterpolator: new FlyToInterpolator(),
-      transitionEasing: d3.easeCubic,
-    });
-  };
-
-  useEffect(() => {
-    goToNYC();
-  });
 
   return (
     <div>
@@ -119,6 +103,8 @@ export default function Map(props) {
             </Popup>
           ) : null
         )} */}
+
+        
       </ReactMapGL>
     </div>
   );
