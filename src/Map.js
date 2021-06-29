@@ -29,8 +29,11 @@ export default function Map(props) {
     };
   }, []);
 
+  let a = [];
   const handleAddClick = (e) => {
-    console.log(e);
+    console.log(e.lngLat);
+    a = e.lngLat;
+    console.log(a);
   };
 
   const onClick = () => {

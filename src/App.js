@@ -6,14 +6,15 @@ import {
   NavLink,
 } from "react-router-dom";
 import "./App.css";
-import Menu from "./Components/Menu";
+import Menu from "./components/Menu";
 import MapView from "./MapView";
-
+import Basic from "./components/Form.js";
 
 function App() {
   return (
     <>
       <Menu />
+      <Basic />
       <Router>
         <Switch>
           <Route path="/create-new-event" />

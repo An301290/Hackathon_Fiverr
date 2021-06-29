@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuBarMap from "./MenuBarMap";
 import Map from "./Map.js";
 import SideBarMap from "./SideBarMap.js";
-import left from './left.png'
+import left from "./left.png";
 
 const MapView = () => {
   const [sidebar, setSidebar] = useState(false);
