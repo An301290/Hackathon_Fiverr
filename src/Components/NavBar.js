@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-const Menu = () => {
+const NavBar = () => {
   return (
     <nav className="md:px-32  h-22 flex justify-between items-center p-5	bg-navbarbg">
       <div className="text-2xl text-secondary font-bold">
@@ -51,4 +51,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default NavBar;
