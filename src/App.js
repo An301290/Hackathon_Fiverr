@@ -11,17 +11,17 @@ import LandingPage from "./Components/LandingPage";
 import Menu from "./Components/Menu";
 import MapView from "./MapView";
 
-
 function App() {
   return (
     <>
       <Router>
-      <Navbar />
+        <Navbar />
+        {/* <LandingPage /> */}
         <Switch>
           <Route exact path="/create-new-event" />
           <Route exact path="/show-events" component={MapView} />
           <Route exact path="/your-events" />
-          <Route exact path="/change-city" />
+          <Route exact path="/change-city" component={LandingPage} />
         </Switch>
       </Router>
     </>

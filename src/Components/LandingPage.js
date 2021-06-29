@@ -4,13 +4,35 @@ import "../styles/LandingPage.css";
 function LandingPage() {
   return (
     <>
-      <div className="countries">
-        <button className="country-berlin" href="/berlin">
+      <div className="main-div">
+        <a href="#" className="country-berlin">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           Berlin
-        </button>
-        <button className="country-budapest">Budapest</button>
-        <button className="country-paris">Paris</button>
-        <button className="country-lisbon">Lisbon</button>
+        </a>
+        <a href="#" className="country-budapest">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Budapest
+        </a>
+        <a href="#" className="country-paris">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Paris
+        </a>
+        <a href="#" className="country-lisbon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Lisbon
+        </a>
       </div>
     </>
   );
