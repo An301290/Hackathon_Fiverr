@@ -1,5 +1,5 @@
 import Navbar from "./components/NavBar";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,23 +9,25 @@ import {
 import "./App.css";
 import MapClick from "./Mapclick";
 import MapView from "./MapView";
-import LandingPage from "./Components/LandingPage";
+import LandingPage from "./components/LandingPage";
 
 function App() {
-
-  const [viewport, setViewport] = useState({
-    latitude: 52.520008,
-    longitude: 13.404954,
-    width: "100vw",
-    height: "100vh",
-    zoom: 5,
-  },[]);
+  const [viewport, setViewport] = useState(
+    {
+      latitude: 52.520008,
+      longitude: 13.404954,
+      width: "100vw",
+      height: "100vh",
+      zoom: 5,
+    },
+    []
+  );
 
   return (
     <>
       <Router>
         <Navbar />
-        <MapView />
+      {/*   <MapView /> */}
         {/* <LandingPage /> */}
         <Switch>
           <Route exact path="/create-new-event" component={MapClick} />

@@ -39,7 +39,7 @@ export default function MapEvent(props) {
 
   const onClick = () => {
     setLocation(null);
-    props.hideSideBar();
+    /* props.hideSideBar(); */
   };
 
   return (
