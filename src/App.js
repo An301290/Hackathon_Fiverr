@@ -1,15 +1,28 @@
-import logo from "./logo.svg";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import "./App.css";
-import "./MapView.js";
-import MapView from "./MapView.js";
+import Menu from "./Components/Menu";
+import MapView from "./MapView";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-      <MapView /></header>
-    </div>
+    <>
+      <Menu />
+      <Router>
+        <Switch>
+          <Route path="/create-new-event" />
+          <Route path="/show-events" component={MapView} />
+          <Route path="/your-events" />
+          <Route path="/change-city" />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
