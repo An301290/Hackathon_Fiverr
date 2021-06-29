@@ -10,6 +10,7 @@ import "./App.css";
 import LandingPage from "./components/LandingPage.js";
 /* import Menu from "./Components/Menu"; */
 import MapView from "./MapView";
+import MapClick from "./Mapclick";
 import Basic from "./components/Form.js";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/create-new-event" component={Basic} />
+          <Route exact path="/create-new-event" component={MapClick} />
           <Route exact path="/show-events" component={MapView} />
           <Route exact path="/your-events" />
           <Route exact path="/change-city" component={LandingPage} />
