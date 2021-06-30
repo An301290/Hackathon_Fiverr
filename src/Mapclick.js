@@ -17,7 +17,8 @@ const MapClick = () => {
     <div>
       {/* <MenuBarMap /> */}
 
-      <div className="map-event">
+      <div className="map-event"></div>
+      <div className="main-map">
         <h1>Please double click on the location to add an event.</h1>
         <MapEvent />
       </div>
