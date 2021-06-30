@@ -42,21 +42,21 @@ export default function Map(props) {
     props.hideSideBar();
   };
 
-  const goToNYC = () => {
-    setViewport({
-      ...viewport,
-      longitude: -74.1,
-      latitude: 40.7,
-      zoom: 14,
-      transitionDuration: 5000,
-      transitionInterpolator: new FlyToInterpolator(),
-      transitionEasing: d3.easeCubic,
-    });
-  };
+  // const goToNYC = () => {
+  //   setViewport({
+  //     ...viewport,
+  //     latitude: 52.520008,
+  //     longitude: 13.404954,
+  //     zoom: 5,
+  //     transitionDuration: 5000,
+  //     transitionInterpolator: new FlyToInterpolator(),
+  //     transitionEasing: d3.easeCubic,
+  //   });
+  // };
 
-  useEffect(() => {
-    goToNYC();
-  });
+  // useEffect(() => {
+  //   goToNYC();
+  // });
 
   return (
     <div>
@@ -72,10 +72,10 @@ export default function Map(props) {
       >
         {countries.map((deutsch, index) => (
           <Marker
-            key={deutsch.city}
-            latitude={deutsch.lat}
-            longitude={deutsch.lng}
-            offsetTop={(-viewport.zoom * 4) / 2}
+          key={deutsch.city}
+          latitude={deutsch.lat}
+          longitude={deutsch.lng}
+          offsetTop={(-viewport.zoom * 4) / 2}
           >
             <button
               className="marker_button"
