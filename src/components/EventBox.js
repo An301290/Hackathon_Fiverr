@@ -26,7 +26,7 @@ const EventBox = () => {
         <div>
           <Event
             name={event.name}
-            date={event.date}
+            // date={event.date}
             desc={event.desc}
             owner={event.owner}
             location_name={event.location_name}

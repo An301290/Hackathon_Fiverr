@@ -1,4 +1,5 @@
 import Navbar from "./components/NavBar";
+import EventBox from "./components/EventBox";
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -28,21 +29,16 @@ function App() {
       {/* <LandingPage/> */}
       <Router>
         <Navbar />
-<<<<<<< HEAD
-=======
-      {/*   <MapView /> */}
+        {/*   <MapView /> */}
         {/* <LandingPage /> */}
->>>>>>> ba7a1efb8b145f4bddf4436e3aea9e7aa287a2f2
         <Switch>
           <Route exact path="/create-new-event" component={MapClick} />
           <Route exact path="/show-events" component={MapView} />
           <Route exact path="/your-events" />
-<<<<<<< HEAD
-          <Route exact path="/change-city" />
-          <Route path="/event" component={EventBox} />
-=======
           <Route exact path="/change-city" component={LandingPage} />
->>>>>>> ba7a1efb8b145f4bddf4436e3aea9e7aa287a2f2
+          <Route exact path="./event">
+            <EventBox />
+          </Route>
         </Switch>
       </Router>
     </>
