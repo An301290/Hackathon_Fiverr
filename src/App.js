@@ -36,15 +36,16 @@ function App() {
         <Switch>
           <Route exact path="/create-new-event" component={MapClick} />
           <Route exact path="/show-events" component={MapView} />
+
+          <Route exact path="/event" component={EventBox} />
+
           <Route exact path="/your-events" component={Navbar} />
           <Route exact path="/change-city" component={ShowEvents} />
-          <Route exact path="/event">
-            <EventBox />
-          </Route>
-
+       
           <Route exact path="/landing">
             <LandingPage />
           </Route>
+
         </Switch>
       </Router>
     </>
