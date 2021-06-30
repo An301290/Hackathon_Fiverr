@@ -9,7 +9,7 @@ const NavBar = () => {
             style={{ width: "100px" }}
             alt=""
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Fiverr_Logo_09.2020.svg/600px-Fiverr_Logo_09.2020.svg.png"
-            onclick="window.open(this.src)"
+            onClick="window.open(this.src)"
           />
         </Link>
       </div>
@@ -32,6 +32,11 @@ const NavBar = () => {
         <li>
           <NavLink to="/change-city" activeClassName="text-secondary">
             Change city
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/event" activeClassName="text-secondary">
+            All events
           </NavLink>
         </li>
       </ul>

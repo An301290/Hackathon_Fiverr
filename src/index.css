@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.event {
+  height: 15vh;
+  width: 25vw;
+  padding: 50px 50px 50px 50px;
+  -webkit-box-shadow: 0px 0px 50px 5px #00fffb;
+  -moz-box-shadow: 0px 0px 50px 5px #00fffb;
+  box-shadow: 0px 0px 50px 5px #00fffb;
+}
+
+.event-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,4 +1,5 @@
 import Event from "./Event";
+import "./../index.css";
 import React, { useState, useEffect } from "react";
 const axios = require("axios");
 
@@ -21,19 +22,23 @@ const EventBox = () => {
   }, []);
   console.log("I am rendering...");
   return (
-    <div>
-      {events.map((event) => (
-        <div>
-          <Event
-            name={event.name}
-            // date={event.date}
-            desc={event.desc}
-            owner={event.owner}
-            location_name={event.location_name}
-            participants={event.participants}
-          ></Event>
-        </div>
-      ))}
+    <div className="event-box">
+      {events.map((event) => {
+        console.log(event);
+        return (
+          <div>
+            {/* {event.name} */}
+            <Event
+              name={event.name}
+              // date={event.date}
+              desc={event.desc}
+              owner={event.owner}
+              location_name={event.location_name}
+              participants={event.participants}
+            ></Event>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -36,9 +36,7 @@ function App() {
           <Route exact path="/show-events" component={MapView} />
           <Route exact path="/your-events" />
           <Route exact path="/change-city" component={LandingPage} />
-          <Route exact path="./event">
-            <EventBox />
-          </Route>
+          <Route exact path="/event" component={EventBox} />
         </Switch>
       </Router>
     </>
