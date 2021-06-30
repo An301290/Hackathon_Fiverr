@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MenuBarMap from "./MenuBarMap";
-import Map from "./Map.js";
+import Maps from "./maps.js";
 import SideBarMap from "./SideBarMap.js";
 
 import LandingPage from "./components/ShowEvents.js";
@@ -37,7 +37,7 @@ const MapView = () => {
         markerNumber={markerNumber}
       />
       <div className="main-map">
-        <Map
+        <Maps
           sidebar={sidebar}
           hideSideBar={hideSideBar}
           showSidebar={showSidebar}

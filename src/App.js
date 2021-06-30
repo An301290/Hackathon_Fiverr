@@ -48,16 +48,21 @@ function App() {
       <Router>
         <Navbar />
         {/*   <MapView /> */}
-        {/* <LandingPage /> */}
+
         <Switch>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
           <Route exact path="/create-new-event">
             <MapClick />
           </Route>
           <Route exact path="/show-events">
             <MapAllEvents events={events} />
-            <MapView />
+            {/* <MapView /> */}
           </Route>
-          <Route exact path="/your-events"></Route>
+          <Route exact path="/your-events">
+            <EventBox />
+          </Route>
           <Route exact path="/landingpage">
             <LandingPage />
           </Route>
@@ -65,8 +70,9 @@ function App() {
             <EventBox />
           </Route>
 
-          <Route exact path="/landing">
-            <LandingPage />
+          <Route exact path="/change-city">
+            <ShowEvents />
+            <MapView />
           </Route>
         </Switch>
       </Router>
