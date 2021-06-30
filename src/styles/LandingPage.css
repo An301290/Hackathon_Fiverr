@@ -211,6 +211,7 @@
   justify-content: center;
   height: 200px;
   width: 200px;
+  color: whitesmoke;
   /* background-image: url("../Images/berlin.jpg"); */
   background-position: center;
   background-size: cover;
@@ -420,6 +421,7 @@
   justify-content: center;
   height: 200px;
   width: 200px;
+  color: whitesmoke;
   background-position: center;
   background-size: cover;
 }
@@ -632,6 +634,7 @@
   background-position: center;
   background-size: cover;
   opacity: 0.9;
+  color: whitesmoke;
 }
 
 .country-lisbon {
@@ -842,4 +845,5 @@
   background-position: center;
   background-size: cover;
   opacity: 0.9;
+  color: whitesmoke;
 }

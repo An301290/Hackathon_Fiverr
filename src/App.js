@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar";
 import EventBox from "./components/EventBox";
+import LandingPage from "./components/LandingPage";
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -10,7 +11,7 @@ import {
 import "./App.css";
 import MapClick from "./Mapclick";
 import MapView from "./MapView";
-import LandingPage from "./components/LandingPage";
+import ShowEvents from "./components/ShowEvents.js";
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -28,15 +29,23 @@ function App() {
     <>
       {/* <LandingPage/> */}
       <Router>
-        <Navbar />
+
+        {/* <Navbar /> */}
         {/*   <MapView /> */}
         {/* <LandingPage /> */}
         <Switch>
           <Route exact path="/create-new-event" component={MapClick} />
           <Route exact path="/show-events" component={MapView} />
-          <Route exact path="/your-events" />
-          <Route exact path="/change-city" component={LandingPage} />
+
           <Route exact path="/event" component={EventBox} />
+
+          <Route exact path="/your-events" component={Navbar} />
+          <Route exact path="/change-city" component={ShowEvents} />
+       
+          <Route exact path="/landing">
+            <LandingPage />
+          </Route>
+
         </Switch>
       </Router>
     </>
