@@ -2,14 +2,15 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import React, { useState, useEffect } from "react";
 import img from "./pin/map-42871_1280@3x.png";
 import "./styles/map.css";
-
+import axios from "axios";
 import countries from "./Data/datas.js";
+
 require("dotenv").config();
 
-export default function MapEvent(props) {
+export default function MapAllEvents({ events }) {
   const [viewport, setViewport] = useState({
-    latitude: 52.520008,
-    longitude: 13.404954,
+    latitude: 52.520008718726341,
+    longitude: 13.404954765281952,
     width: "100vw",
     height: "100vh",
     zoom: 5,
@@ -37,12 +38,12 @@ export default function MapEvent(props) {
     sessionStorage.setItem("lastLat", e.lngLat[0]);
     sessionStorage.setItem("lastLng", e.lngLat[1]);
   };
+  /* console.log("here", events[0].lat); */
 
   const onClick = () => {
     setLocation(null);
     /* props.hideSideBar(); */
   };
-
   return (
     <div>
       <ReactMapGL
@@ -53,38 +54,29 @@ export default function MapEvent(props) {
         onViewportChange={(viewport) => {
           setViewport(viewport);
         }}
-        onClick={onClick}
       >
-        {countries.map((deutsch, index) => (
+        {events.length &&
+          events.map((event, index) => {
+            console.log(event);
 
-
-
-          <Marker
-            key={deutsch.city}
-            latitude={deutsch.lat}
-            longitude={deutsch.lng}
-            offsetTop={(-viewport.zoom * 4) / 2}
-          >
-            <button
-              className="marker_button"
-              onClick={(e) => {
-                e.preventDefault();
-                setLocation(index);
-                props.showSidebar();
-                props.showMarker(index, deutsch.lat);
-              }}
-            >
-              <img
-                src={img}
-                alt="Pin"
-                width={viewport.zoom * 3}
-                height={viewport.zoom * 4}
-              />
-            </button>
-          </Marker>
-        ))}
-        
-        
+            return (
+              <Marker latitude={event.lat} longitude={event.lng}>
+                <button
+                  className="marker_button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                >
+                  <img
+                    src={img}
+                    alt="Pin"
+                    width={viewport.zoom * 3}
+                    height={viewport.zoom * 4}
+                  />
+                </button>
+              </Marker>
+            );
+          })}
       </ReactMapGL>
     </div>
   );

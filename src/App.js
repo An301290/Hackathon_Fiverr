@@ -1,6 +1,6 @@
 import Navbar from "./components/NavBar";
 import EventBox from "./components/EventBox";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +12,7 @@ import MapClick from "./Mapclick";
 import MapView from "./MapView";
 import LandingPage from "./components/LandingPage";
 import axios from "axios";
+import MapAllEvents from "./mapallevents";
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -25,8 +26,19 @@ function App() {
     []
   );
 
-  const response = axios.get("http://localhost:8000/api/events");
-  console.log(response);
+  const [events, setEvents] = useState([]);
+  const fetchEvents = async () => {
+    try {
+      let response = await axios.get("/api/event");
+      console.log(response.data);
+      setEvents(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchEvents();
+  }, []);
 
   return (
     <>
@@ -36,10 +48,17 @@ function App() {
         {/*   <MapView /> */}
         {/* <LandingPage /> */}
         <Switch>
-          <Route exact path="/create-new-event" component={MapClick} />
-          <Route exact path="/show-events" component={MapView} />
-          <Route exact path="/your-events" />
-          <Route exact path="/change-city" component={LandingPage} />
+          <Route exact path="/create-new-event">
+            <MapClick />
+          </Route>
+          <Route exact path="/show-events">
+            <MapAllEvents events={events} />
+            <MapView />
+          </Route>
+          <Route exact path="/your-events"></Route>
+          <Route exact path="/change-city">
+            <LandingPage />
+          </Route>
           <Route exact path="./event">
             <EventBox />
           </Route>

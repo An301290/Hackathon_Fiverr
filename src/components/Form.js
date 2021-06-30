@@ -30,12 +30,7 @@ const Basic = () => (
 
           //console.log(json.stringify(values));
           //add to db
-          try {
-            let response = await axios.get("/api/event", values);
-            console.log(response);
-          } catch (err) {
-            console.log(err);
-          }
+         
 
           try {
             let data = await axios.post("/api/event", values);
