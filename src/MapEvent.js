@@ -2,6 +2,7 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import React, { useState, useEffect } from "react";
 import img from "./pin/map-42871_1280@3x.png";
 import "./styles/map.css";
+
 import countries from "./Data/datas.js";
 require("dotenv").config();
 
@@ -55,6 +56,9 @@ export default function MapEvent(props) {
         onClick={onClick}
       >
         {countries.map((deutsch, index) => (
+
+
+
           <Marker
             key={deutsch.city}
             latitude={deutsch.lat}

@@ -2,6 +2,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
+import { mapValues } from "lodash-es";
 
 const Basic = () => (
   <div>
@@ -30,8 +31,15 @@ const Basic = () => (
           //console.log(json.stringify(values));
           //add to db
           try {
+            let response = await axios.get("/api/event", values);
+            console.log(response);
+          } catch (err) {
+            console.log(err);
+          }
+
+          try {
             let data = await axios.post("/api/event", values);
-            axios.post("/api/event");
+            /*  axios.post("/api/event"); */
           } catch (err) {
             console.log(err);
           }

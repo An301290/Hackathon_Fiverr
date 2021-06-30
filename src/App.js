@@ -10,6 +10,7 @@ import "./App.css";
 import MapClick from "./Mapclick";
 import MapView from "./MapView";
 import LandingPage from "./components/LandingPage";
+import axios from "axios";
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -23,12 +24,15 @@ function App() {
     []
   );
 
+  const response = axios.get("http://localhost:8000/api/events");
+  console.log(response);
+
   return (
     <>
       {/* <LandingPage/> */}
       <Router>
         <Navbar />
-      {/*   <MapView /> */}
+        {/*   <MapView /> */}
         {/* <LandingPage /> */}
         <Switch>
           <Route exact path="/create-new-event" component={MapClick} />
