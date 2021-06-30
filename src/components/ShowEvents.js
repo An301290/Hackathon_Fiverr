@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../styles/LandingPage.css";
+import Navbar from "./NavBar";
 
 function ShowEvents({ viewport, setViewport }) {
   return (
     <>
+    <Navbar />
       <div className="main-div">
         <a href="" className="country-berlin">
           <span></span>

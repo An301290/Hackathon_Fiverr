@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "./components/NavBar";
+
 import MapEvent from "./MapEvent.js";
 import Basic from "./components/Form";
 /* import LandingPage from "./components/LandingPage.js"; */
@@ -15,6 +17,8 @@ const MapClick = () => {
 
   return (
     <div>
+      <Navbar />
+
       {/* <MenuBarMap /> */}
 
       <div className="main-map">
