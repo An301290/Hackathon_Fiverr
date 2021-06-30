@@ -3,7 +3,7 @@ import MenuBarMap from "./MenuBarMap";
 import Map from "./Map.js";
 import SideBarMap from "./SideBarMap.js";
 
-import LandingPage from "./components/LandingPage.js";
+import LandingPage from "./components/ShowEvents.js";
 
 const MapView = () => {
   const [sidebar, setSidebar] = useState(false);

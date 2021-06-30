@@ -1,4 +1,4 @@
-import Event from "./Event";
+import Event from "../components/Event";
 import React, { useState, useEffect } from "react";
 const axios = require("axios");
 

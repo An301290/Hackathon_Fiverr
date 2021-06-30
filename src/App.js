@@ -1,6 +1,7 @@
 import Navbar from "./components/NavBar";
 import EventBox from "./components/EventBox";
 import React, { useEffect, useState } from "react";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ import MapView from "./MapView";
 import LandingPage from "./components/LandingPage";
 import axios from "axios";
 import MapAllEvents from "./mapallevents";
+import ShowEvents from "./components/ShowEvents.js";
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -56,11 +58,15 @@ function App() {
             <MapView />
           </Route>
           <Route exact path="/your-events"></Route>
-          <Route exact path="/change-city">
+          <Route exact path="/landingpage">
             <LandingPage />
           </Route>
           <Route exact path="./event">
             <EventBox />
+          </Route>
+
+          <Route exact path="/landing">
+            <LandingPage />
           </Route>
         </Switch>
       </Router>
