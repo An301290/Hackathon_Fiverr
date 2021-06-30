@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/LandingPage.css";
 
-function LandingPage({ viewport, setViewport }) {
+function ShowEvents({ viewport, setViewport }) {
   return (
     <>
       <div className="main-div">
@@ -12,7 +12,7 @@ function LandingPage({ viewport, setViewport }) {
           <span></span>
           Berlin
         </a>
-        <a href="/budapest" className="country-budapest" >
+        <a href="/budapest" className="country-budapest">
           <span></span>
           <span></span>
           <span></span>
@@ -38,4 +38,4 @@ function LandingPage({ viewport, setViewport }) {
   );
 }
 
-export default LandingPage;
+export default ShowEvents;

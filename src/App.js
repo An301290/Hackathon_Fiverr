@@ -10,7 +10,7 @@ import {
 import "./App.css";
 import MapClick from "./Mapclick";
 import MapView from "./MapView";
-import LandingPage from "./components/LandingPage";
+import ShowEvents from "./components/ShowEvents.js";
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/create-new-event" component={MapClick} />
           <Route exact path="/show-events" component={MapView} />
           <Route exact path="/your-events" />
-          <Route exact path="/change-city" component={LandingPage} />
+          <Route exact path="/change-city" component={ShowEvents} />
           <Route exact path="./event">
             <EventBox />
           </Route>
